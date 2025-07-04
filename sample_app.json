@@ -1,0 +1,30 @@
+{ "app": {
+   
+   "title": "Sample App",
+   "version": "0.0.0",
+   "supplier": "NASA",
+   "copyright": "Apache 2.0",
+   "url": "https://github.com/nasa/sample_app",
+
+   "description": [
+      "App spec for NASA's Sample App. Basecamp's proxy_sample_app",
+      "spec defines which version is used."
+   ],
+   
+   "cfs": {
+      "cfe-type": "CFE_APP",
+      "obj-file": "sample_app",
+      "entry-symbol": "SAMPLE_APP_Main",
+      "name": "SAMPLE_APP",
+      "priority": 70,
+      "stack": 16384,
+      "load_addr": 0,
+      "exception-action": 0,
+      "app-framework": "cfs",
+      "tables": ["sample_app_tbl.tbl"]
+   },
+   
+   "requires": ["sample_lib"]
+
+}}
+
