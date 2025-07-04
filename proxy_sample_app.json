@@ -23,7 +23,7 @@
    },
       
    "cfs": {
-      "cfe-type": "CFE_PROXY",
+      "cfe-type": "CFE_PROXY"
    },
    
    "requires": []
