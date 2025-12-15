@@ -35,14 +35,6 @@
 
       <StringDataType name="ExampleString" length="${SAMPLE_APP/STRING_VAL_LEN}" />
 
-      <ContainerDataType name="DisplayParam_Payload" shortDescription="Example Command with a payload/argument">
-        <EntryList>
-          <Entry name="ValU32" type="BASE_TYPES/uint32" shortDescription="32 bit unsigned integer value" />
-          <Entry name="ValI16" type="BASE_TYPES/int16" shortDescription="16 bit signed integer value" />
-          <Entry name="ValStr" type="ExampleString" shortDescription="An example string" />
-        </EntryList>
-      </ContainerDataType>
-
       <ContainerDataType name="HkTlm_Payload" shortDescription="Sample App Housekeeping Content">
         <EntryList>
           <Entry name="CommandCounter" type="BASE_TYPES/uint8" />
@@ -79,15 +71,6 @@
           <ValueConstraint entry="Sec.FunctionCode" value="2" />
         </ConstraintSet>
       </ContainerDataType>
-
-      <ContainerDataType name="DisplayParamCmd" baseType="CommandBase">
-        <ConstraintSet>
-          <ValueConstraint entry="Sec.FunctionCode" value="3" />
-        </ConstraintSet>
-        <EntryList>
-          <Entry type="DisplayParam_Payload" name="Payload" />
-        </EntryList>
-      </ContainerDataType>
       
       <!-- Note the type name here must be "SampleAppTable" to match the C table definition file,
            but the source code uses the type "SampleAppTable" -->
@@ -98,7 +81,7 @@
         </EntryList>
       </ContainerDataType>
       
-      <ContainerDataType name="TblFile_Payload" shortDescription="Pseudo telemetry payload">
+      <ContainerDataType name="TblFile_Payload" shortDescription="Proxy telemetry payload">
         <EntryList>
           <Entry name="FileHdr" type="CFE_FS/Header"    shortDescription="cFE standard file header" />
           <Entry name="TblHdr"  type="CFE_TBL/File_Hdr" shortDescription="cFE standard table header" />
@@ -133,7 +116,7 @@
               <GenericTypeMap name="TelemetryDataType" type="HkTlm" />
             </GenericTypeMapSet>
           </Interface>
-          <Interface name="TBL_FILE" shortDescription="Pseudo telemetry for File System Table File" type="CFE_SB/Telemetry">
+          <Interface name="TBL_FILE" shortDescription="Proxy telemetry for File System Table File" type="CFE_SB/Telemetry">
             <GenericTypeMapSet>
               <GenericTypeMap name="TelemetryDataType" type="TblFile" />
             </GenericTypeMapSet>

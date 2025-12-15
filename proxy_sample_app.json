@@ -14,7 +14,7 @@
 
    "proxy": {
       "url": "https://github.com/nasa/sample_app",
-      "branch-tag": "equuleus-rc1",
+      "release-tag": "equuleus-rc1",
       "update-files": [
          "sample_app.json    >> sample_app.json",
          "CMakeLists.txt     >> CMakeLists.txt",
