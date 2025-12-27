@@ -76,8 +76,8 @@
            but the source code uses the type "SampleAppTable" -->
       <ContainerDataType name="SampleAppTable" shortDescription="Example Table structure">
         <EntryList>
-          <Entry name="Int1" type="BASE_TYPES/uint16" />
-          <Entry name="Int2" type="BASE_TYPES/uint16" />
+          <Entry name="Int1" type="BASE_TYPES/uint8" shortDescription="bc: uint16->uint8 to avoid byte flip issue" />
+          <Entry name="Int2" type="BASE_TYPES/uint8" shortDescription="bc: uint16->uint8 to avoid byte flip issue" />
         </EntryList>
       </ContainerDataType>
       

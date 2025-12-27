@@ -1,7 +1,7 @@
 { "app": {
    
    "title": "Proxy Sample App",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "supplier": "Open STEMware",
    "copyright": "bitValence",
    "url": "https://github.com/cfs-apps/proxy_sample_app",
@@ -19,7 +19,8 @@
          "sample_app.json    >> sample_app.json",
          "CMakeLists.txt     >> CMakeLists.txt",
          "eds/sample_app.xml >> eds/sample_app.xml",
-         "fsw/platform_inc/sample_app_msgids.h >> fsw/platform_inc/sample_app_msgids.h" 
+         "fsw/platform_inc/sample_app_msgids.h >> fsw/platform_inc/sample_app_msgids.h", 
+         "fsw/platform_inc/sample_app_table.h  >> fsw/platform_inc/sample_app_table.h"
       ]
    },
       
