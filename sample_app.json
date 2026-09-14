@@ -1,7 +1,7 @@
 { "app": {
    
    "title": "Sample App",
-   "version": "0.0.0",
+   "version": "4.0",
    "supplier": "NASA",
    "copyright": "Apache 2.0",
    "url": "https://github.com/nasa/sample_app",
@@ -24,7 +24,9 @@
       "tables": ["sample_app_tbl.tbl"]
    },
    
-   "requires": ["sample_lib"]
+   "requires": ["sample_lib"],
+
+   "usr-msg-topics": ["SAMPLE_APP_SEND_HK_TOPICID,4"]
 
 }}
 
