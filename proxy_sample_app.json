@@ -26,7 +26,15 @@
       "cfe-type": "CFE_PROXY"
    },
    
-   "requires": []
+   "requires": [],
+   
+   "support-files": { 
+      "cmd-sender":  "sample_app_cmds.txt",
+      "file-server": "",
+      "scripts":     "",
+      "templates":   "",
+      "tutorials":   ""
+   }
    
 }}
 

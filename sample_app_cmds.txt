@@ -1,0 +1,35 @@
+"""
+Sample App Commands
+
+License:
+    Copyright 2022 bitValence, Inc.
+    All Rights Reserved.
+
+Notes:
+  1. Provide all Sample App commands and commands to manage its table
+
+"""
+>#
+># Sample App Commands
+>#
+> 'SAMPLE_APP', 'DisplayParamCmd', {'ValU32': 1234, 'ValI16': 321, 'ValStr': 'Hello'}  ## Event message displays the parameters
+> 'SAMPLE_APP', 'NoopCmd', {}           ## Event message displays app version
+> 'SAMPLE_APP', 'ProcessCmd', {}        ## Event message displays the table values
+> 'SAMPLE_APP', 'ResetCountersCmd', {}  ## Reset command counters to zero sent in Housekeeping telemetry
+>#
+># Table Management Demonstration
+># 1. Send table registery to show default table loaded 
+># 2. Dump table to file
+># 3. Use File Browser to transfer table file from flight to ground
+># 4. Use Tools->Manage cFS Tables to display/modify/save table file
+># 5. Use File Browser to transfer table file from ground to flight
+># 6. Load new table to working buffer
+># 7. Validate table in working buffer
+># 8. Activate new table
+># 9. Send Sample ProcessCmd to show verify new values were loaded
+>#
+> 'CFE_TBL', 'SendRegistryCmd', {'TableName':'SAMPLE_APP.ExampleTable'}  ## Table registry displayed CFE_TBL/REG_TLM telemetry message
+> 'CFE_TBL', 'DumpCmd', {'ActiveTableFlag': 'ACTIVE', 'TableName':'SAMPLE_APP.ExampleTable', 'DumpFilename':'/cf/t.tbl'}  ## Transfer table file ground, modify it and transfer modified file to flight 
+> 'CFE_TBL', 'LoadCmd', {'LoadFilename':'/cf/t.tbl'} 
+> 'CFE_TBL', 'ValidateCmd', {'ActiveTableFlag': 'INACTIVE', 'TableName':'SAMPLE_APP.ExampleTable'}
+> 'CFE_TBL', 'ActivateCmd', {'TableName':'SAMPLE_APP.ExampleTable'}
